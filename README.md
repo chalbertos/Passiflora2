@@ -9,7 +9,11 @@ This dataset contains the car sale listings on a popular online auto marketplace
 # Questions that our group will answer: #
 
 Question 1 (Most Popular Cars) -> Chris using Python
-Question 2  (Difference between private sellers and dealers) -> Angie using Python
+
+Question 2 (Difference between private sellers and dealers) -> Angie using Python
+
 Question 3 (Where are the most used/new cars) -> Barbara using RStudio
+
 Question 4 ( Is it better to buy from private seller or dealer)
+
 Question 5 ( Does Price Vary by Region, what region is best for buying or sellling, etc?) -> Kris 
