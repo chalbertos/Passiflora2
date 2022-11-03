@@ -12,7 +12,7 @@ Question 1 (Most Popular Cars) -> Chris using Python
 
 Question 2 (Difference between private sellers and dealers) -> Angie using Python
 
-Question 3 (Where are the most used/new cars) -> Barbara using RStudio
+Question 3 (Where are the most used/new cars) -> Barbara using RStudio & Python
 
 Question 4 ( Is it better to buy from private seller or dealer)
 
