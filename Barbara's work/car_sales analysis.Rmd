@@ -1,0 +1,71 @@
+The imported CarSales dataset has 9379 observations and 32 variables. The geographical level used in this analysis is state and will be used to determine the most used car or new car in this platform.
+```{r}
+library(readxl)
+cars<-read_excel("CarSales.xlsx")
+#check the structure
+#str(cars)
+head(cars)
+```
+
+Before beginning our analysis, we will need to convert variable Used/New to a factor in the code chunk below. We then rename the certified brands into New. 
+
+```{r}
+#convert into a factor variable
+cars$`Used/New`<-as.factor(cars$`Used/New`)
+#rename the levels 
+cars$`used/new` <-ifelse(cars$`Used/New`=="Used","used","new")
+                      
+```
+
+```{r}
+table(cars$`used/new`)
+library(ggplot2)
+library(ggeasy)
+ggplot(cars,aes(`used/new`))+
+  geom_bar(fill="darkgreen")+
+  ggtitle("Barplot of used/new cars")+
+  ggeasy::easy_center_title()
+```
+The results show that there are more used cars(7900) as compared to the new ones(1479).Also from the barlot above, the bar representing used cars is longer than for the new cars.
+
+```{r}
+library(tidyverse)
+##state with the most used cars
+df1<-cars %>% 
+  select(`used/new`,State) %>% 
+  filter(`used/new`=="used") %>% 
+  group_by(State,`used/new`) %>%
+  count() %>% 
+  arrange(-n) %>% 
+  ungroup()
+df1
+
+
+```
+
+The state with the highest count of used cars is TX with a count of 1069 used cars.
+
+```{r}
+##state with the most new cars
+df2<-cars %>% 
+  select(`used/new`,State) %>% 
+  filter(`used/new`=="new") %>% 
+  group_by(State,`used/new`) %>%
+  count() %>% 
+  arrange(-n) %>% 
+  ungroup()
+df2
+```
+
+The state with the most new cars is FL with a count of 157 cars.
+
+```{r}
+##plotting according to state
+cars %>% 
+  ggplot(aes(`used/new`,fill=State))+
+  geom_bar()+
+  coord_flip()+
+  ggtitle("Types of cars in different states")
+```
+
+In the plot above, there are too many states hence visualization is not very clear but one can use the different colours to identify the state associated with the type of car whether used or new
