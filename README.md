@@ -16,4 +16,6 @@ Question 3 (Where are the most used/new cars) -> Barbara using RStudio & Python
 
 Question 4 ( Is it better to buy from private seller or dealer)
 
-Question 5 ( Does Price Vary by Region, what region is best for buying or sellling, etc?) -> Kris 
+Question 5 (Does Price Vary by Region, what region is best for buying or sellling, etc?) -> Kris 
+
+Question 6 ( Which model is the most economic, combination of : Max MPG, affordability, reliability) -> Chris via Python
