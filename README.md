@@ -14,7 +14,7 @@ Question 2 (Difference between private sellers and dealers) -> Angie using Pytho
 
 Question 3 (Where are the most used/new cars) -> Barbara using RStudio & Python
 
-Question 4 ( Is it better to buy from private seller or dealer)
+Question 4 ( Is it better to buy from private seller or dealer) -> Barbara
 
 Question 5 (Does Price Vary by Region, what region is best for buying or sellling, etc?) -> Kris 
 
